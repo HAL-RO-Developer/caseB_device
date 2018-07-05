@@ -124,11 +124,11 @@ SINT ServerCommunication::response_serv(SINT* data)
 
   delay(100);
   
-  Serial.print("NOW is DEVICE COPY : ");
-  const int servo_angle = root["angle"];
+  int servo_angle = root["angle"];
+  Serial.print("Copied Data : ");
+  Serial.println(servo_angle);
   *data = servo_angle;
   
-  Serial.println(" Responsed");
   if(client.connected()){
     client.stop();
   }

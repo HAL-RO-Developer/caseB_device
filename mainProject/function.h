@@ -16,7 +16,7 @@
 #include "InfoStruct.h"
 
 /* --- Prototype --- */
-SINT getAngle       ( SINT );
+SINT getAngle       ( SINT* );
 SINT registerDevice ( void );
 void setupWifi      ( void );
 void getWiFiConfig  ( void );

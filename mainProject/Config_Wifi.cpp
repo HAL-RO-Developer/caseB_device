@@ -11,7 +11,7 @@ IPAddress subnet( 255, 255, 255, 0 );
 extern WIFICONFIG internet;
 String mac_id;
 
-SINT getAngle( SINT servo_angle )
+SINT getAngle( SINT* servo_angle )
 {
   ServerCommunication sc;
   /* サーバ接続 */
@@ -25,7 +25,7 @@ SINT getAngle( SINT servo_angle )
   String url = "/thing/button";
   sc.put(url,reqData, String(host));  /* PUT      */
   delay(300);
-  sc.response_serv(&servo_angle);     /* RESPONSE */
+  sc.response_serv(servo_angle);     /* RESPONSE */
   delay(300);
 }
 

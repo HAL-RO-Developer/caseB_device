@@ -34,9 +34,9 @@ void loop()
   SINT servo_angle;
   if(digitalRead(APSWT) == LOW){
     //POST & PUT
-    getAngle(servo_angle);
+    getAngle(&servo_angle);
     //サーボを回転
-    Serial.println("Done 1");
+    Serial.println(servo_angle);
     rotateServo(servo_angle);
     //ブザーを鳴らす
     bip();
