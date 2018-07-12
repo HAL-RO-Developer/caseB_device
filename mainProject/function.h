@@ -23,7 +23,6 @@ void getWiFiConfig  ( void );
 void getDeviceConfig( void );
 void connectRouter  ( void );
 void rotateServo    ( SINT );
-void bip            ( void );
 
 /* Root */
 void handleRootMain ( void );

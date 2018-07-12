@@ -10,10 +10,10 @@
 
 #include "System.h"
 
-const   SCHR* host        = "47ca3262.ngrok.io";
+const   SCHR* host        = "a2d71630.ngrok.io";
 const   SCHR* port        = "443";
 
-const   SCHR*   ap_ssid   = "caseSTUDY2018";
+const   SCHR*   ap_ssid   = "caseB";
 const   SCHR*   ap_pass   = "password";
 
 const   SCHR*   setting_w = "/wifi.json";
