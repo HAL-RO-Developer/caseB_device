@@ -10,7 +10,6 @@
 
 #include "System.h"
 
-const   SCHR* host        = "33df9d45.ngrok.io";
 const   SCHR* port        = "443";  
 
 const   SCHR*   ap_ssid   = "caseB";

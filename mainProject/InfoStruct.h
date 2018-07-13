@@ -21,6 +21,12 @@ typedef struct{
   String device_id;   /* デバイスID              */
 } WIFICONFIG;
 
+/* --- URL管理構造体 --- */
+typedef struct{
+  String host;        /* 接続ルーターSSID        */
+  String fingerprint; /* 接続ルーターパスワード  */
+} HOSTCONFIG;
+
 #endif  /* __INFO_STRUCT_H__ */
 
 /* Copyright HAL College of Technology & Design */

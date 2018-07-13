@@ -25,9 +25,9 @@ void connectRouter  ( void );
 void rotateServo    ( SINT );
 
 /* LED Blink */
-void apBlink(void);
-void runBlink(void);
-void regBlink(void);
+void apBlink        ( void );
+void runBlink       ( void );
+void regBlink       ( void );
 
 /* Root */
 void handleRootMain ( void );
@@ -35,5 +35,7 @@ void handleGetWifi  ( void );
 void handlePostWifi ( void );
 void handleGetPin   ( void );
 void handlePostPin  ( void );
+void handleGetHost  ( void );
+void handlePostHost ( void );
 
 #endif /* __FUNCTION_H__ */
