@@ -58,6 +58,7 @@ SINT registerDevice()
   fd.println( json );
   fd.close();
   Serial.println("Device Registered : " +internet.device_id);
+  regBlink();
 }
 
 void getWiFiConfig( )
@@ -103,6 +104,7 @@ void getWiFiConfig( )
 
 void connectRouter()
 {
+  runBlink();
   getWiFiConfig();
   Serial.print("Connecting to ");
   Serial.println(internet.ssid.c_str());
@@ -115,11 +117,13 @@ void connectRouter()
       Serial.print(".");
       delay( 500 );
   }
-  Serial.println("WiFi connected");  
+  Serial.println("WiFi connected");
+  regBlink();
 }
 
 void setupWifi()
 {
+  apBlink();
   WiFi.mode(WIFI_AP);
   WiFi.softAPConfig(ip, ip, subnet);
   WiFi.softAP( ap_ssid, ap_pass );
@@ -135,6 +139,7 @@ void setupWifi()
     server.handleClient();
     delay(1);
   }
+  regBlink();
 }
 
 void handleRootMain()

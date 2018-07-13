@@ -24,6 +24,11 @@ void getDeviceConfig( void );
 void connectRouter  ( void );
 void rotateServo    ( SINT );
 
+/* LED Blink */
+void apBlink(void);
+void runBlink(void);
+void regBlink(void);
+
 /* Root */
 void handleRootMain ( void );
 void handleGetWifi  ( void );

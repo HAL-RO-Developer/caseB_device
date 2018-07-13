@@ -28,17 +28,20 @@ void setup()
   }
 }
 
+
+SINT servo_angle=35;
 void loop()
 {
-  SINT servo_angle;
   if(digitalRead(BTN_PIN) == HIGH){
+    //サーボを回転
+    servo.write(servo_angle);
     //POST & PUT
     getAngle(&servo_angle);
-    //サーボを回転
     Serial.println(servo_angle);
     rotateServo(servo_angle);
     //ブザーを鳴らす
     digitalWrite(LED_PIN,LOW);
+    servo_angle+=35;
  }
   delay(100);
 }
@@ -64,7 +67,6 @@ void deviceInit()
   delay(3000); //ボタン待ち
   
   if(digitalRead(APSWT)==LOW){
-    Serial.println("WiFi Settings");
     setupWifi();
   } 
   else if(digitalRead(APSWT)==HIGH) {
